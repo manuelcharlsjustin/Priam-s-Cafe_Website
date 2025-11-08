@@ -8,17 +8,30 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
-    padding: 10px;
-    background-color: #735238;
+    padding: 1em;
+    background-color: #964b00;
+    color: #fff;
 }
 
-.title {
-    margin: 0;
-    padding: 10px;
-    color: wheat;
+.cafe-banner {
+  background-color: #964B00;
+  text-align: center;
+  padding: 0px 0px 0px 70px; 
 }
 
+.cafe-banner h1 {
+  font-family: serif;
+  font-size: 50px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.cafe-banner p {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-top: 5px;
+}
 .nav {
     display: flex;
     margin: 0;
@@ -28,23 +41,61 @@ html, body {
     font-size: 25px;
 }
 
-.nav a {
-    text-decoration: none;
-    color: white;    
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding-right: 100px;
 }
 
-.nav a:hover{
-    color: burlywood;
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  padding: 0.5em;
+}
+
+header nav a:hover {
+  color: #786c3b; 
+  border-bottom: 2px solid #786c3b;
 }
 
 body {
     background-color: #886E58;
 }
 
-.welcome { /* im trying to copy the border looking thing in our pdf */
-    border: 1px solid black;
-    background-color: bisque;
-    width: 100%;
-    margin-top: 25vh;
-    text-align: center;
+.hero {
+  text-align: center;
+  padding: 2em;
+  background-color: #f0e4cc; 
+}
+
+.hero h1 {
+  font-size: 2em;
+  color: #786c3b;
+}
+
+.welcome {
+  padding: 2em;
+  background-color: #fff;
+}
+
+.welcome h2 {
+  font-size: 1.5em;
+  color: #964b00;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.carousel-controls button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #964b00;
 }
