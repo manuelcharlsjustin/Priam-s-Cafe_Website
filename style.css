@@ -68,12 +68,24 @@ body {
 .hero {
   text-align: center;
   padding: 2em;
-  background-color: #f0e4cc; 
+  /* background-color: #f0e4cc;  */
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-image: url(https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/477289921_611566098285519_5155460311187136690_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHisM4vAYcbWqe7YpdBt6jfZkAM-SEOyjVmQAz5IQ7KNZP8048jdNNZFyZT3AaaAlqE42bTk-tpOd2LwdkEMLY3&_nc_ohc=TTl6l9gp28wQ7kNvwHRLFGo&_nc_oc=AdnlzXzw3BFd7rs7uUrG9L8x9c9XSycDQLniPejvSvdUpxQ2MT-mMEDXaXh2IVwkQ4k&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=Qc5vlgRj9nQwZRMWbL45Gw&oh=00_Afimpt5qX6-wiD67rDIEPz4FDQTRp9Bv4pSqTLi0AcXfXQ&oe=69165655);
 }
 
 .hero h1 {
-  font-size: 2em;
-  color: #786c3b;
+  font-size: 3em;
+  color: #bea536;
+  margin: 0;
+  padding-bottom: 60px;
+}
+
+.hero p {
+  font-size: 25px;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  color: rgb(240, 255, 157);
 }
 
 .welcome {
