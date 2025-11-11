@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    html{
+        scroll-behavior: smooth;
+    }
     .menu-container {
         width: 80%;
         margin: 40px auto;
@@ -22,7 +25,7 @@
         border-radius: 5px;
         margin-bottom: 20px;
     }
-
+    
     .menu-nav ul {
         list-style: none;
         display: flex;
@@ -83,8 +86,8 @@
     <!--CONTENT-->
     <main>
         <section class="hero">
-            <h1>EDIT</h1>
-            <p>EDIT THIS PART DIN</p>
+            <h1>MENU</h1>
+            <p>Brewed to perfection. Sip, smile, repeat.</p>
 
             <!-- Mene-->
             <div id="menu">
@@ -95,75 +98,197 @@
                     <div class="menu-nav">
                         <nav>
                             <ul>
-                                <li><a href="#">COFFEE CLASSICS</a></li>
-                                <li><a href="#">MILK BASED</a></li>
-                                <li><a href="#">FRAPPUCCINOS</a></li>
-                                <li><a href="#">REFRESHERS</a></li>
-                                <li><a href="#">COFFEE & BITES</a></li>
+                                <li><a href="#coffee">COFFEE CLASSICS</a></li>
+                                <li><a href="#milk">MILK BASED</a></li>
+                                <li><a href="#frap">FRAPPUCCINOS</a></li>
+                                <li><a href="#ref">REFRESHERS</a></li>
+                                <li><a href="#bites">COFFEE & BITES</a></li>
                             </ul>
                         </nav>
                     </div>
+                    <section id ="coffee">
                     <!-- Menu Navigation -->
                     <h2>CLASSIC COFFEES</h2>
                     <div class="menu-grid">
-                        <!-- 9 product items -->
+                        <!-- 10 product items -->
                         <div class="product">
                             <div class="product-image"></div>
-                            <h3>Product Name</h3>
+                            <h3>Black Coffee</h3>
+                            <p>"Strong, bold, and pure — a classic brew for true coffee lovers."</p>
+                            <p>ICED 16oz..........................................70.00<br>ICED 22oz..........................................90.00<br>HOT 12oz...........................................60.00</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Ca Phe Sua Da</h3>
+                            <p>“A bold Vietnamese brew poured over ice and mellowed with creamy condensed milk — sweet, smooth, and perfectly balanced.”</p>
+                            <p>ICED 16oz  70.00<br>ICED 22oz  90.00<br>HOT 12oz  60.00</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Cafe Latte</h3>
+                            <p>“Velvety steamed milk meets rich espresso in this classic latte — the perfect balance of creaminess and flavor.”</p>
+                            <p>ICED 16oz  70.00<br>ICED 22oz  90.00<br>HOT 12oz  60.00</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>French Vanilla</h3>
                             <p>Description, color, size</p>
                             <p>$95 <s>$119</s> -20%</p>
                         </div>
                         <div class="product">
                             <div class="product-image"></div>
-                            <h3>Product Name</h3>
-                            <p>Description, color, size</p>
-                            <p>$95 <s>$119</s> -20%</p>
-                        </div>
-                        <div class="product">
-                            <div class="product-image"></div>
-                            <h3>Product Name</h3>
-                            <p>Description, color, size</p>
-                            <p>$95 <s>$119</s> -20%</p>
-                        </div>
-                        <div class="product">
-                            <div class="product-image"></div>
-                            <h3>Product Name</h3>
-                            <p>Description, color, size</p>
-                            <p>$95 <s>$119</s> -20%</p>
-                        </div>
-                        <div class="product">
-                            <div class="product-image"></div>
-                            <h3>Product Name</h3>
+                            <h3>Spanish Latte</h3>
                             <p>Description, color, size</p>
                             <p>$95 <s>$119</s>20%</p>
                         </div>
                         <div class="product">
                             <div class="product-image"></div>
-                            <h3>Product Name</h3>
+                            <h3>Caramel Macchiato</h3>
                             <p>Description, color, size</p>
                             <p>$95 <s>$119</s> -20%</p>
                         </div>
                         <div class="product">
                             <div class="product-image"></div>
-                            <h3>Product Name</h3>
+                            <h3>Mocha Hazelnut</h3>
                             <p>Description, color, size</p>
                             <p>$95 <s>$119</s> -20%</p>
                         </div>
                         <div class="product">
                             <div class="product-image"></div>
-                            <h3>Product Name</h3>
+                            <h3>White Chocolate Mocha</h3>
                             <p>Description, color, size</p>
                             <p>$95 <s>$119</s> -20%</p>
                         </div>
                         <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Salted Caramel Macchiato</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Coffee Jelly Latte</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                    </div>
+                    </section>
+                    <section id ="milk">
+                    <h2>MILK BASED</h2>
+                    <div class="menu-grid">
+                        <!-- 4 product items -->
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Priam's Iced Chocolate Latte</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Ice Strawberry Latte</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Matcha Latte</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>White Chocolate Oat Matcha</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                    </div>
+                    </section>
+                    <section id ="frap">
+                    <h2>FRAPPUCCINOS</h2>
+                    <div class="menu-grid">
+                        <!-- 5 product items -->
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Choco Java</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Golden Caramel</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Strawberry Swirl</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Jelly Brew</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Very Matcha</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s>20%</p>
+                        </div>
+                    </div>
+                    </section>
+                    <section id ="ref">
+                    <h2>REFRESHERS</h2>
+                    <div class="menu-grid">
+                        <!-- 2 product items -->
+                        <div class="product">
+                            <div class="Sparkling Strawberry"></div>
+                            <h3>Product Name</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="Homemade Iced Tea">
                             <div class="product-image"></div>
                             <h3>Product Name</h3>
                             <p>Description, color, size</p>
                             <p>$95 <s>$119</s> -20%</p>
                         </div>
                     </div>
+                    </section>
+                    <section id ="bites">
+                    <h2>COFFEE & BITES</h2>
+                    <div class="menu-grid">
+                        <!-- 4 product items -->
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Flavored Fries</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Tofu Squares</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Pinoy Cravings Combo</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                        <div class="product">
+                            <div class="product-image"></div>
+                            <h3>Cheese Sticks</h3>
+                            <p>Description, color, size</p>
+                            <p>$95 <s>$119</s> -20%</p>
+                        </div>
+                    </div>
+                    </section>
                 </div>
-            </div>
+            </div>  
 
         </section>
     </main>
