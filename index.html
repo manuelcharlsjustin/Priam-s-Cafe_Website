@@ -23,19 +23,92 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="hero">
-      <h1>Say hello to your new favorite</h1>
-      <p>OPEN EVERYDAY 2:00 PM-10:00 PM</p>
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+      <span class="title-line">Say Hello To </span>
+      <span class="title-line">Your New Favorite</span>
+      </h1>
+      <p class="hero-subtitle">
+      OPEN EVERYDAY 2:00 PM-10:00 PM
+      </p>
     </div>
-    <div class="welcome">
-      <h2>Welcome to our Cafe Site!</h2>
-      <p>Picture this: it's mid-afternoon, you're craving something sweet, and the day feels like a bit too long. You
-        step into Priam's, the smell of freshly brewed coffee greets you, and pillows beckon you to cozy up. You're
-        sipping on a latte labeled 'cautious weather' while enjoying our cafe on the side. That's the little joy we love
-        sharing with you.</p>
+  </section>
+
+  <!-- Info Section with Next Button (CSS-only cycling) -->
+  <section class="info-section">
+    <div class="info-container">
+      <!-- Radio buttons for cycling (hidden) -->
+      <input type="radio" name="info-slider" id="info1" checked>
+      <input type="radio" name="info-slider" id="info2">
+      <input type="radio" name="info-slider" id="info3">
+      <input type="radio" name="info-slider" id="info4">
+                
+      <div class="info-card">
+        <div class="info-indicator">
+          <label for="info1" class="indicator-dot"></label>
+          <label for="info2" class="indicator-dot"></label>
+          <label for="info3" class="indicator-dot"></label>
+          <label for="info4" class="indicator-dot"></label>
+        </div>
+                    
+        <!-- Info slides -->
+        <div class="info-slides">
+          <div class="info-slide">
+            <h2 class="info-title">Our Story</h2>
+            <p class="info-description">
+            Nestled in the heart of the city, our cafe has been serving exceptional coffee since 2020. Every cup tells a story of passion, quality, and dedication to the craft of coffee making.
+            </p>
+            <label for="info2" class="next-button">
+            Next
+              <svg class="next-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </label>
+          </div>
+                        
+          <div class="info-slide">
+            <h2 class="info-title">Premium Beans</h2>
+            <p class="info-description">
+            We source our beans from sustainable farms across Ethiopia, Colombia, and Brazil. Each batch is carefully roasted to perfection, bringing out unique flavors and aromas that define our signature blends.
+            </p>
+            <label for="info3" class="next-button">
+            Next
+              <svg class="next-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </label>
+          </div>
+                        
+          <div class="info-slide">
+            <h2 class="info-title">Cozy Atmosphere</h2>
+            <p class="info-description">
+            Our space is designed to be your sanctuary away from the hustle. Warm lighting, comfortable seating, and the gentle aroma of freshly brewed coffee create the perfect environment for work, meetings, or relaxation.
+            </p>
+            <label for="info4" class="next-button">
+            Next
+              <svg class="next-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </label>
+          </div>
+                        
+          <div class="info-slide">
+            <h2 class="info-title">Community Hub</h2>
+            <p class="info-description">
+            More than just a cafe, we're a gathering place for creatives, entrepreneurs, and coffee lovers. Join us for live music every Friday evening and art exhibitions featuring local artists.
+            </p>
+            <label for="info1" class="next-button">
+            Next
+              <svg class="next-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
 
   <!--FOOTER-->
   <div class="footer">
