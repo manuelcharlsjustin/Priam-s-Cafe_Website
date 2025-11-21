@@ -11,64 +11,115 @@
 </head>
 
 <style>
+    .hero {
+        background-image: url(pictures/sayhellotofav.jpg);
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position: center;
+        /* background-color: rgba(240, 248, 255, 0.5); */
+        margin-left: -20px;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(218, 218, 218);
+    }
 
-.hero {
-    background-color: rgba(240, 248, 255, 0.507);
-    margin-top: 50px;
-    text-align: right;
-    margin-left: 50em;
-    
-}
+    .hero h1 {
+        padding-left: 25px;
+        font-size: 50px;
+    }
 
-.hero h1 {
-    padding-right: 30px;
-    font-size: 50px;
-    display: inline-block;
-    
-}
+    .hero p {
+        padding-right: 50px;
+        font-size: 20px;
+        padding-left: 50px;
+    }
 
-.hero p {
-    padding-right: 50px;
-    font-size: 20px;
-}
+    /* ratings */
+    .more {
+        background-color: rgba(240, 248, 255, 0.6);
+        margin-top: 20px;
+        margin-left: -20px;
+        padding-left: 50px;
+        margin-bottom: -20px;
+    }
 
-.more {
-    background-color: rgba(240, 248, 255, 0.507);
-    margin-top: 50px;
-    margin-right: 50em;
-}
 
-.more h1 {
-    padding-left: 25px;
-    font-size: 50px;
-}
+    .ratings-wrapper {
+        padding: 40px;
+        border-radius: 8px;
+        margin: auto;
+        display: flex;
+        gap: 40px;
+    }
 
-.more p {
-    padding-left: 50px;
-    font-size: 20px;
-}
+    .main-rating {
+        width: 25%;
+    }
 
+    .main-rating h3 {
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+
+    .stars {
+        color: #000000;
+        font-size: 22px;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+
+    .stars span.filled {
+        color: #000;
+    }
+
+    .review-grid {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .review {
+        padding-right: 10px;
+    }
+
+    .review-title {
+        font-weight: bold;
+        margin: 8px 0;
+    }
+
+    .review-text {
+        color: #000000;
+        font-size: 14px;
+        line-height: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .review-footer {
+        font-size: 13px;
+        color: #525252;
+    }
 </style>
 
 <body>
     <!--HEADER-->
     <header class="header">
-    <div class="cafe-banner">
-      <div class="logo">
-        <div class="cup">
-          <div class="handle"></div>
+        <div class="cafe-banner">
+            <div class="logo">
+                <div class="cup">
+                    <div class="handle"></div>
+                </div>
+                <div class="steam">
+                    <div class="steam-circle"></div>
+                    <div class="steam-circle"></div>
+                    <div class="steam-circle"></div>
+                </div>
+                <div>
+                    <h1>PRIAM'S CAFE</h1>
+                    <p>say hello to your new favorite</p>
+                </div>
+            </div>
         </div>
-        <div class="steam">
-          <div class="steam-circle"></div>
-          <div class="steam-circle"></div>
-          <div class="steam-circle"></div>
-        </div> 
-        <div>
-          <h1>PRIAM'S CAFE</h1>
-          <p>say hello to your new favorite</p>
-        </div>
-      </div>
-    </div>
         <nav>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
@@ -84,14 +135,94 @@
         <section class="hero">
             <div class="info">
                 <h1>About Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque voluptatibus quas ullam a libero ex provident maxime est. Dolor magnam dicta ducimus reprehenderit non deleniti corporis doloremque veniam autem?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eaque voluptatibus quas ullam a
+                    libero ex provident maxime est. Dolor magnam dicta ducimus reprehenderit non deleniti corporis
+                    doloremque veniam autem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita corporis
+                    iure nesciunt ea. Maiores et, autem, velit quis ipsum reiciendis ea tenetur neque exercitationem,
+                    libero expedita labore ipsa illum repellendus! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Suscipit quisquam maiores illo deleniti aut aspernatur deserunt ut aperiam dignissimos debitis
+                    sapiente aliquam esse mollitia fugit, laboriosam laudantium. Debitis, nulla mollitia? Lorem ipsum
+                    dolor sit amet consectetur, adipisicing elit. Modi adipisci libero nisi aliquam itaque quisquam,
+                    consequatur necessitatibus quasi sint tempora eum soluta architecto ducimus, fugit ab odio qui
+                    voluptatibus reprehenderit!</p>
 
             </div>
         </section>
 
         <section class="more">
-            <h1> More About Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt similique ipsa, quis tempora, obcaecati dolorum nihil fugit quam architecto eveniet excepturi quos, pariatur iste? Quibusdam commodi dolorem distinctio maxime reiciendis.</p>
+            <div class="ratings-wrapper">
+
+                <!-- Main Rating Column -->
+                <div class="main-rating">
+                    <h3>Our Rating</h3>
+
+                    <div class="stars">
+                        ★★★★☆
+                    </div>
+
+                    <div style="font-size: 14px; color: #777;">
+                        Based on 203 reviews
+                    </div>
+                </div>
+
+                <!-- Review Grid -->
+                <div class="review-grid">
+
+                    <!-- Review 1 -->
+                    <div class="review">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-title">Great value and quality</div>
+                        <div class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam...
+                        </div>
+                        <div class="review-footer">John Doe · 5 days ago</div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review">
+                        <div class="stars">★★★★☆</div>
+                        <div class="review-title">Beautiful design</div>
+                        <div class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam...
+                        </div>
+                        <div class="review-footer">Jane D. · 4 days ago</div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review">
+                        <div class="stars">★★★★☆</div>
+                        <div class="review-title">Exactly what I wanted</div>
+                        <div class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam...
+                        </div>
+                        <div class="review-footer">Mark W. · 1 week ago</div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-title">Amazing build quality</div>
+                        <div class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed...
+                        </div>
+                        <div class="review-footer">Sarah P. · 3 days ago</div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review">
+                        <div class="stars">★★★☆☆</div>
+                        <div class="review-title">Good but could improve</div>
+                        <div class="review-text">Aliquam eget tortor ac eros tincidunt iaculis. Aliquam et...</div>
+                        <div class="review-footer">Mike T. · 2 weeks ago</div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="review">
+                        <div class="stars">★★★★★</div>
+                        <div class="review-title">Exceeded expectations</div>
+                        <div class="review-text">Mauris imperdiet dolor eget lacus egestas, id malesuada...</div>
+                        <div class="review-footer">Linda S. · 1 day ago</div>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
     </main>
 
