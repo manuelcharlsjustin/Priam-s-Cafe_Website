@@ -23,6 +23,24 @@
         color: rgb(218, 218, 218);
     }
 
+    .info {
+        max-width: 800px;
+        text-align: center;
+        z-index: 2;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .hero h1 {
         padding-left: 25px;
         font-size: 50px;
