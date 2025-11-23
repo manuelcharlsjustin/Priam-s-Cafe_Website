@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    html{
+    html {
         scroll-behavior: smooth;
     }
+
+    body {
+        background-color: #f3d5b5; /* if it doesnt support gradients */
+        background-image: linear-gradient(to top, #ffedd8, #f3d5b5, #e7bc91, #d4a276, #bc8a5f);
+    }
+
     .menu-container {
         width: 80%;
         margin: 40px auto;
@@ -27,23 +33,26 @@
     }
 
     .hero {
-        text-align: center;  /* Centers the h1 and p */
+        text-align: center;
+        /* Centers the h1 and p */
         padding: 40px 0;
     }
+
     .hero h1 {
         color: #412206;
         font-family: 'lucida handwriting', cursive;
         font-size: 3rem;
         font-weight: 700;
-         font-size: 2.5rem;
+        font-size: 2.5rem;
         margin-bottom: 20px;
     }
+
     .hero p {
         font-size: 1.2rem;
         color: #666;
-        margin-bottom: 40px;  
+        margin-bottom: 40px;
     }
-    
+
     .menu-nav ul {
         list-style: none;
         display: flex;
@@ -56,7 +65,7 @@
         text-decoration: none;
         color: #333;
         font-weight: bold;
-        
+
     }
 
     .menu-grid {
@@ -78,7 +87,7 @@
         background-color: #f0f0f0;
     }
 
-    
+
 
     .product h3 {
         font-size: 14px;
@@ -89,7 +98,8 @@
         font-size: 12px;
         color: #666;
     }
-    .sizes ul{
+
+    .sizes ul {
         list-style: none;
         display: flex;
         gap: 20px;
@@ -99,7 +109,8 @@
         margin-bottom: 0px;
         font-weight: bold;
     }
-    .prices ul{
+
+    .prices ul {
         list-style: none;
         display: flex;
         gap: 40px;
@@ -108,29 +119,27 @@
         color: #666;
         margin-bottom: 60px;
     }
-    
-
 </style>
 
 <body>
     <!--HEADER-->
     <header class="header">
-    <div class="cafe-banner">
-      <div class="logo">
-        <div class="cup">
-          <div class="handle"></div>
+        <div class="cafe-banner">
+            <div class="logo">
+                <div class="cup">
+                    <div class="handle"></div>
+                </div>
+                <div class="steam">
+                    <div class="steam-circle"></div>
+                    <div class="steam-circle"></div>
+                    <div class="steam-circle"></div>
+                </div>
+                <div>
+                    <h1>PRIAM'S CAFE</h1>
+                    <p>say hello to your new favorite</p>
+                </div>
+            </div>
         </div>
-        <div class="steam">
-          <div class="steam-circle"></div>
-          <div class="steam-circle"></div>
-          <div class="steam-circle"></div>
-        </div> 
-        <div>
-          <h1>PRIAM'S CAFE</h1>
-          <p>say hello to your new favorite</p>
-        </div>
-      </div>
-    </div>
         <nav>
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
@@ -164,579 +173,602 @@
                             </ul>
                         </nav>
                     </div>
-                    <section id ="coffee">
-                    <!-- Menu Navigation -->
-                    <h2>CLASSIC COFFEES</h2>
-                    <div class="menu-grid">
-                        <!-- 10 product items -->
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\blackcoffee.jpg" alt="Black Coffee">
-                             </div>
-                            <section class="Black coffee">
-                            <h3>Black Coffee</h3>
-                            <p>"Strong, bold, and pure — a classic brew for true coffee lovers."</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>70.00</li>
-                                    <li>90.00</li>
-                                    <li>60.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            </section>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                            <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Ca Phe Sua Da.jpg.jpg" alt="Ca phe Sua Da">   
-                            </div>
-                            <h3>Ca Phe Sua Da</h3>
-                            <p>“A bold Vietnamese brew poured over ice and mellowed with creamy condensed milk — sweet, smooth, and perfectly balanced.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>80.00</li>
-                                    <li>100.00</li>
-                                    <li>70.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\cafelatte.jpg.jpg" alt="Cafe Latte">
-                            </div>
-                            <h3>Cafe Latte</h3>
-                            <p>“Velvety steamed milk meets rich espresso in this classic latte — the perfect balance of creaminess and flavor.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>80.00</li>
-                                    <li>100.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Frenchvanilla.jpg.jpg" alt="French Vanilla">
-                            </div>
-                            <h3>French Vanilla</h3>
-                            <p>"Smooth, creamy, and delicately sweet — a timeless favorite infused with rich vanilla flavor."</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>85.00</li>
-                                    <li>105.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Spanish Latte.jpg.jpg" alt="Spanish Latte">
-                            </div>
-                            <h3>Spanish Latte</h3>
-                            <p>“Rich, smooth, and perfectly sweet — a creamy blend inspired by traditional Spanish café culture.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>85.00</li>
-                                    <li>105.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\caramelmacchiato.jpg" alt="Caramel Macchiato">
-                            </div>
-                            <h3>Caramel Macchiato</h3>
-                            <p>“A velvety blend of espresso and milk, finished with golden caramel drizzle for the perfect balance of sweet and bold.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>85.00</li>
-                                    <li>105.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src= "D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Mocha Hazelnut.jpg.jpg" alt="Mocha Hazelnut">
-                            </div>
-                            <h3>Mocha Hazelnut</h3>
-                            <p>“Creamy mocha infused with roasted hazelnut flavor — a perfect harmony of coffee, chocolate, and nutty sweetness.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>90.00</li>
-                                    <li>110.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src= "D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\White Chocolate Mocha.jpg.jpg" alt="White Chocolate Mocha">
-                            </div>
-                            <h3>White Chocolate Mocha</h3>
-                            <p>“A luxurious mix of espresso, steamed milk, and velvety white chocolate — perfectly balanced and irresistibly smooth.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>90.00</li>
-                                    <li>110.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src= "D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Salted Caramel Macchiato.jpg.jpg" alt="Salted Caramel Macchiato">
-                            </div>
-                            <h3>Salted Caramel Macchiato</h3>
-                            <p>“A smooth blend of espresso and milk layered with buttery caramel and a touch of sea salt for a sweet–salty delight.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>90.00</li>
-                                    <li>110.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src= "D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Coffee Jelly Latte.jpg.jpg" alt="Coffee Jelly Latte">
-                            </div>
-                            <h3>Coffee Jelly Latte</h3>
-                            <p>“A perfect blend of espresso, milk, and silky coffee jelly for a fun and flavorful coffee experience.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>95.00</li>
-                                    <li>115.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                    </div>
-                    </section>
-                    <section id ="milk">
-                    <h2>MILK BASED</h2>
-                    <div class="menu-grid">
-                        <!-- 4 product items -->
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Priam's Iced Chocolate Latte.jpg" alt="Priam's Iced Chocolate Latte">
-                            </div>
-                            <h3>Priam's Iced Chocolate Latte</h3>
-                            <p>“A rich blend of chocolate and milk served over ice — smooth, creamy, and perfectly sweet.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>90.00</li>
-                                    <li>110.00</li>
-                                    <li>80.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Ice Strawberry Latte.jpg" alt="Ice Strawberry Latte">
-                            </div>
-                            <h3>Ice Strawberry Latte</h3>
-                            <p>“A smooth blend of milk and sweet strawberry syrup served over ice — creamy, cool, and delightfully fruity.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>90.00</li>
-                                    <li>110.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Matcha Latte.jpg" alt="Matcha Latte">
-                            </div>
-                            <h3>Matcha Latte</h3>
-                            <p>“Creamy milk infused with authentic matcha — smooth, vibrant, and refreshing.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                    <li>110.00</li>
-                                    <li>130.00</li>
-                                    <li>100.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\White Chocolate Oat Matcha.jpg" alt="White Chocolate Oat Matcha">
-                            </div>
-                            <h3>White Chocolate Oat Matcha</h3>
-                            <p>"A comforting mix of matcha and oat milk infused with white chocolate — rich, silky, and naturally satisfying.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                   <li>135.00</li>
-                                   <li>155.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                    </div>
-                    </section>
-                    <section id ="frap">
-                    <h2>FRAPPUCCINOS</h2>
-                    <div class="menu-grid">
-                        <!-- 5 product items -->
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Choco Java.jpg">
-                            </div>
-                            <h3>Choco Java</h3>
-                            <p>“Creamy chocolate frappe with a shot of espresso — bold coffee flavor meets sweet, icy indulgence.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                   <li>110.00</li>
-                                   <li>130.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Golden Caramel.jpg">
-                            </div>
-                            <h3>Golden Caramel</h3>
-                            <p>“A creamy caramel frappe blended to perfection — smooth, sweet, and refreshingly indulgent.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                   <li>110.00</li>
-                                   <li>130.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Strawberry Swirl.jpg">
-                            </div>
-                            <h3>Strawberry Swirl</h3>
-                            <p>“A creamy, ice-blended drink with sweet strawberry swirls — smooth, refreshing, and delightfully fruity.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                   <li>110.00</li>
-                                   <li>130.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Jelly Brew.jpg">
-                            </div>
-                            <h3>Jelly Brew</h3>
-                            <p>“A refreshing coffee frappe with chewy coffee jelly — smooth, sweet, and satisfyingly fun.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                   <li>130.00</li>
-                                   <li>140.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Very Matcha.jpg">
-                            </div>
-                            <h3>Very Matcha</h3>
-                            <p>“Premium matcha blended with milk and ice for a cool, creamy, and energizing treat.”</p>
-                            <div class="sizes">
-                            <nav>
-                                <ul>
-                                    <li>Cold 16oz</li>
-                                    <li>Cold 22oz</li>
-                                    <li>Hot 12oz</li>
-                                </ul>
-                            </nav>
-                            </div>
-                            <div class="prices">
-                            <nav>
-                                <ul>
-                                   <li>130.00</li>
-                                   <li>140.00</li>
-                                </ul>
-                            </nav>
-                            </div>
-                        </div>
-                    </div>
-                    </section>
-                    <section id ="ref">
-                    <h2>REFRESHERS</h2>
-                    <div class="menu-grid">
-                    <!-- 2 product items -->
-                    <div class="product">
-                         <div class="product-image">
-                            <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Sparkling Strawberry.jpg">
-                         </div>   
-                            <h3>Sparkling Strawberry</h3>
-                            <p>“A bubbly strawberry refresher that's sweet, tangy, and perfectly cool.”</p>
-                                <div class="sizes">
-                                 <nav>
-                                     <ul>
-                                        <li>Cold 16oz</li>                                         <li>Cold 22oz</li>
-                                         <li>Hot 12oz</li>
-                                      </ul>
-                                </nav>
+                    <section id="coffee">
+                        <!-- Menu Navigation -->
+                        <h2>CLASSIC COFFEES</h2>
+                        <div class="menu-grid">
+                            <!-- 10 product items -->
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\blackcoffee.jpg" alt="Black Coffee">
                                 </div>
-                                <div class="prices">
-                                    <nav>
-                                       <ul>
-                                            <li>80.00</li>
-                                            <li>100.00</li>
-                                      </ul>
-                                   </nav>
-                               </div>
-                             </div>
-                             <div class="product">
-                             <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Homemade Iced Tea.jpg">
-                             </div>
-                                <h3>Homemade Iced Tea</h3>
-                                <p>“A classic brewed iced tea served chilled — smooth, crisp, and perfectly refreshing.”</p>
+                                <section class="Black coffee">
+                                    <h3>Black Coffee</h3>
+                                    <p>"Strong, bold, and pure — a classic brew for true coffee lovers."</p>
                                     <div class="sizes">
-                                         <nav>
+                                        <nav>
                                             <ul>
-                                              <li>Cold 16oz</li>                                                     <li>Cold 22oz</li>
-                                              <li>Hot 12oz</li>
+                                                <li>Cold 16oz</li>
+                                                <li>Cold 22oz</li>
+                                                <li>Hot 12oz</li>
                                             </ul>
-                                         </nav>
+                                        </nav>
                                     </div>
                                     <div class="prices">
                                         <nav>
-                                           <ul>
-                                               <li>120.00</li>
-                                               <li>140.00</li>
-                                           </ul>
+                                            <ul>
+                                                <li>70.00</li>
+                                                <li>90.00</li>
+                                                <li>60.00</li>
+                                            </ul>
                                         </nav>
-                                  </div>
+                                    </div>
+                                </section>
                             </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Ca Phe Sua Da.jpg.jpg" alt="Ca phe Sua Da">
+                                </div>
+                                <h3>Ca Phe Sua Da</h3>
+                                <p>“A bold Vietnamese brew poured over ice and mellowed with creamy condensed milk —
+                                    sweet, smooth, and perfectly balanced.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>80.00</li>
+                                            <li>100.00</li>
+                                            <li>70.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\cafelatte.jpg.jpg" alt="Cafe Latte">
+                                </div>
+                                <h3>Cafe Latte</h3>
+                                <p>“Velvety steamed milk meets rich espresso in this classic latte — the perfect balance
+                                    of creaminess and flavor.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>80.00</li>
+                                            <li>100.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Frenchvanilla.jpg.jpg" alt="French Vanilla">
+                                </div>
+                                <h3>French Vanilla</h3>
+                                <p>"Smooth, creamy, and delicately sweet — a timeless favorite infused with rich vanilla
+                                    flavor."</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>85.00</li>
+                                            <li>105.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Spanish Latte.jpg.jpg" alt="Spanish Latte">
+                                </div>
+                                <h3>Spanish Latte</h3>
+                                <p>“Rich, smooth, and perfectly sweet — a creamy blend inspired by traditional Spanish
+                                    café culture.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>85.00</li>
+                                            <li>105.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\caramelmacchiato.jpg" alt="Caramel Macchiato">
+                                </div>
+                                <h3>Caramel Macchiato</h3>
+                                <p>“A velvety blend of espresso and milk, finished with golden caramel drizzle for the
+                                    perfect balance of sweet and bold.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>85.00</li>
+                                            <li>105.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Mocha Hazelnut.jpg.jpg" alt="Mocha Hazelnut">
+                                </div>
+                                <h3>Mocha Hazelnut</h3>
+                                <p>“Creamy mocha infused with roasted hazelnut flavor — a perfect harmony of coffee,
+                                    chocolate, and nutty sweetness.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>90.00</li>
+                                            <li>110.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\White Chocolate Mocha.jpg.jpg" alt="White Chocolate Mocha">
+                                </div>
+                                <h3>White Chocolate Mocha</h3>
+                                <p>“A luxurious mix of espresso, steamed milk, and velvety white chocolate — perfectly
+                                    balanced and irresistibly smooth.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>90.00</li>
+                                            <li>110.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Salted Caramel Macchiato.jpg.jpg" alt="Salted Caramel Macchiato">
+                                </div>
+                                <h3>Salted Caramel Macchiato</h3>
+                                <p>“A smooth blend of espresso and milk layered with buttery caramel and a touch of sea
+                                    salt for a sweet–salty delight.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>90.00</li>
+                                            <li>110.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Coffee Jelly Latte.jpg.jpg" alt="Coffee Jelly Latte">
+                                </div>
+                                <h3>Coffee Jelly Latte</h3>
+                                <p>“A perfect blend of espresso, milk, and silky coffee jelly for a fun and flavorful
+                                    coffee experience.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>95.00</li>
+                                            <li>115.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
                     </section>
-                    <section id ="bites">
-                    <h2>COFFEE & BITES</h2>
-                    <div class="menu-grid">
-                        <!-- 4 product items -->
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Flavored Fries.jpg">
+                    <section id="milk">
+                        <h2>MILK BASED</h2>
+                        <div class="menu-grid">
+                            <!-- 4 product items -->
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Priam's Iced Chocolate Latte.jpg"
+                                        alt="Priam's Iced Chocolate Latte">
+                                </div>
+                                <h3>Priam's Iced Chocolate Latte</h3>
+                                <p>“A rich blend of chocolate and milk served over ice — smooth, creamy, and perfectly
+                                    sweet.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>90.00</li>
+                                            <li>110.00</li>
+                                            <li>80.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
-                            <h3>Flavored Fries</h3>
-                            <p>"Crispy potato fries coated in your favorite flavor"</p>
-                            <p>Flavors: BBQ|Cheese|Sour Cream <br> 80.00</p>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Tofu Squares.jpg">
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Ice Strawberry Latte.jpg" alt="Ice Strawberry Latte">
+                                </div>
+                                <h3>Ice Strawberry Latte</h3>
+                                <p>“A smooth blend of milk and sweet strawberry syrup served over ice — creamy, cool,
+                                    and delightfully fruity.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>90.00</li>
+                                            <li>110.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
-                            <h3>Tofu Squares</h3>
-                            <p>"Crunchy tofu bites served with a creamy liver-infused mayo and a kick of a chili garlic oil."</p>
-                            <p>50.00(5pcs)</p>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\Pinoy Cravings Combo.jpeg">
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Matcha Latte.jpg" alt="Matcha Latte">
+                                </div>
+                                <h3>Matcha Latte</h3>
+                                <p>“Creamy milk infused with authentic matcha — smooth, vibrant, and refreshing.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>110.00</li>
+                                            <li>130.00</li>
+                                            <li>100.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
-                            <h3>Pinoy Cravings Combo</h3>
-                            <p>"Crispy, tasty, and proudly Pinoy! A combo of 10 kikiam and 10 fishballs that hits the spot everytime."</p>
-                            <p>40.00</p>
-                        </div>
-                        <div class="product">
-                            <div class="product-image">
-                                <img src= "D:\PC\Documents\GitHub\Priam-s-Cafe_Website\pictures\cheesestick.png">
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\White Chocolate Oat Matcha.jpg" alt="White Chocolate Oat Matcha">
+                                </div>
+                                <h3>White Chocolate Oat Matcha</h3>
+                                <p>"A comforting mix of matcha and oat milk infused with white chocolate — rich, silky,
+                                    and naturally satisfying.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>135.00</li>
+                                            <li>155.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
-                            <h3>Cheese Sticks</h3>
-                            <p>Creamy cheese wrapped in a crisp, golden crust</p>
-                            <p>Flavors:BBQ|Cheese|Sour Cream <br> 20.00(4pcs)   </p>
                         </div>
-                    </div>
+                    </section>
+                    <section id="frap">
+                        <h2>FRAPPUCCINOS</h2>
+                        <div class="menu-grid">
+                            <!-- 5 product items -->
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Choco Java.jpg">
+                                </div>
+                                <h3>Choco Java</h3>
+                                <p>“Creamy chocolate frappe with a shot of espresso — bold coffee flavor meets sweet,
+                                    icy indulgence.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>110.00</li>
+                                            <li>130.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Golden Caramel.jpg">
+                                </div>
+                                <h3>Golden Caramel</h3>
+                                <p>“A creamy caramel frappe blended to perfection — smooth, sweet, and refreshingly
+                                    indulgent.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>110.00</li>
+                                            <li>130.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Strawberry Swirl.jpg">
+                                </div>
+                                <h3>Strawberry Swirl</h3>
+                                <p>“A creamy, ice-blended drink with sweet strawberry swirls — smooth, refreshing, and
+                                    delightfully fruity.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>110.00</li>
+                                            <li>130.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Jelly Brew.jpg">
+                                </div>
+                                <h3>Jelly Brew</h3>
+                                <p>“A refreshing coffee frappe with chewy coffee jelly — smooth, sweet, and satisfyingly
+                                    fun.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>130.00</li>
+                                            <li>140.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Very Matcha.jpg">
+                                </div>
+                                <h3>Very Matcha</h3>
+                                <p>“Premium matcha blended with milk and ice for a cool, creamy, and energizing treat.”
+                                </p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>130.00</li>
+                                            <li>140.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="ref">
+                        <h2>REFRESHERS</h2>
+                        <div class="menu-grid">
+                            <!-- 2 product items -->
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Sparkling Strawberry.jpg">
+                                </div>
+                                <h3>Sparkling Strawberry</h3>
+                                <p>“A bubbly strawberry refresher that's sweet, tangy, and perfectly cool.”</p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>80.00</li>
+                                            <li>100.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Homemade Iced Tea.jpg">
+                                </div>
+                                <h3>Homemade Iced Tea</h3>
+                                <p>“A classic brewed iced tea served chilled — smooth, crisp, and perfectly refreshing.”
+                                </p>
+                                <div class="sizes">
+                                    <nav>
+                                        <ul>
+                                            <li>Cold 16oz</li>
+                                            <li>Cold 22oz</li>
+                                            <li>Hot 12oz</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="prices">
+                                    <nav>
+                                        <ul>
+                                            <li>120.00</li>
+                                            <li>140.00</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="bites">
+                        <h2>COFFEE & BITES</h2>
+                        <div class="menu-grid">
+                            <!-- 4 product items -->
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Flavored Fries.jpg">
+                                </div>
+                                <h3>Flavored Fries</h3>
+                                <p>"Crispy potato fries coated in your favorite flavor"</p>
+                                <p>Flavors: BBQ|Cheese|Sour Cream <br> 80.00</p>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Tofu Squares.jpg">
+                                </div>
+                                <h3>Tofu Squares</h3>
+                                <p>"Crunchy tofu bites served with a creamy liver-infused mayo and a kick of a chili
+                                    garlic oil."</p>
+                                <p>50.00(5pcs)</p>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\Pinoy Cravings Combo.jpeg">
+                                </div>
+                                <h3>Pinoy Cravings Combo</h3>
+                                <p>"Crispy, tasty, and proudly Pinoy! A combo of 10 kikiam and 10 fishballs that hits
+                                    the spot everytime."</p>
+                                <p>40.00</p>
+                            </div>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="pictures\cheesestick.png">
+                                </div>
+                                <h3>Cheese Sticks</h3>
+                                <p>Creamy cheese wrapped in a crisp, golden crust</p>
+                                <p>Flavors:BBQ|Cheese|Sour Cream <br> 20.00(4pcs) </p>
+                            </div>
+                        </div>
                     </section>
                 </div>
-            </div>  
+            </div>
 
         </section>
     </main>
