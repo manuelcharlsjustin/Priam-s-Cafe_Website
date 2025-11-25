@@ -14,9 +14,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(168, 83, 17);
+    background-color: #7f5539;
     /* background-color: rgba(255, 255, 255, 0.1); */
-    border-radius: 10px;
     padding: 10px;
 }
 
@@ -166,7 +165,7 @@ main {
 
 /*FOOTER*/
 .footer {
-  background-color: #A85311;
+  background-color: #7f5539;
   color: #fff;
   font-family: serif;
   font-size: 15px;
