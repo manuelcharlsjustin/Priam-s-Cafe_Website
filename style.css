@@ -152,7 +152,15 @@ header nav a:hover {
   color: #36241c;
 }
 
+header nav a.active {
+  color: #36241c;
+}
+
 header nav a:hover::after {
+  width: 100%;
+}
+
+header nav a.active::after {
   width: 100%;
 }
 
