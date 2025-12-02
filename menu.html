@@ -15,139 +15,158 @@
     }
 
     body {
-        background-color: #f3d5b5; /* if it doesnt support gradients */
+        background-color: #f3d5b5;
+        /* if it doesnt support gradients */
         background-image: linear-gradient(to top, #ffedd8, #f3d5b5, #e7bc91, #d4a276, #bc8a5f);
     }
 
     .menu-container {
-        width: 80%;
+        max-width: 1200px;
+        width: 90%;
         margin: 40px auto;
+        padding: 0 15px;
+        box-sizing: border-box
     }
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
+
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
     .search-bar input[type="search"] {
         width: 100%;
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
-    /* Payment button */
-.payment-button {
-    padding: 10px 18px;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    background-color: #6f4e37; /* coffee brown */
-    color: #fff3e0;            /* cream */
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.2s ease;
-    white-space: nowrap;
-}
-.payment-button:hover {
-    background-color: #5a3d2b;
-}
 
-/* Hide checkboxes */
-.popup-toggle {
-    display: none;
-}
+    .payment-button {
+        padding: 10px 18px;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+        background-color: #6f4e37;
+        color: #fff3e0;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.2s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
 
-/* Popup overlay */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;               
-    justify-content: center;     
-    align-items: center;         
-    background: rgba(0,0,0,0.3); 
-    transform: scale(0);
-    transition: transform 0.3s ease;
-    z-index: 100;
-}
+    .payment-button:hover {
+        background-color: #5a3d2b;
+    }
 
-/* Popup content box */
-.popup-content {
-    background-color: #fff3e0;
-    color: #3b2f2f;
-    padding: 25px 35px;
-    border-radius: 12px;
-    text-align: center;
-    min-width: 280px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
+    .popup-toggle {
+        display: none;
+    }
 
-/* Show first popup */
-#payment-popup-toggle:checked ~ .popup1 {
-    transform: scale(1);
-}
+    /* Popup overlay */
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.3);
+        transform: scale(0);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
 
-/* Popup options */
-.popup-option {
-    display: inline-block;
-    margin: 10px 8px;
-    padding: 6px 14px;
-    background-color: #6f4e37;
-    color: #fff3e0;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background 0.2s ease;
-}
-.popup-option:hover {
-    background-color: #5a3d2b;
-}
+    /* Popup content box */
+    .popup-content {
+        background-color: #fff3e0;
+        color: #3b2f2f;
+        padding: 25px 35px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 90%;
+        min-width: 280px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
 
-/* Close button */
-.popup-close {
-    display: block;
-    margin-top: 15px;
-    font-size: 12px;
-    color: #6f4e37;
-    cursor: pointer;
-    text-decoration: underline;
-}
+    #payment-popup-toggle:checked~.popup1 {
+        transform: scale(1);
+    }
 
-/* Notification */
-.notification {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%) scale(0);
-    background-color: #6f4e37;
-    color: #fff3e0;
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-size: 18px;
-    text-align: center;
-    opacity: 0;
-    z-index: 200;
-    transition: transform 0.3s, opacity 0.3s;
-}
+    .popup-option {
+        display: inline-block;
+        margin: 10px 8px;
+        padding: 6px 14px;
+        background-color: #6f4e37;
+        color: #fff3e0;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.2s ease;
+    }
 
-/* Show notification when checkbox checked */
-#thankyou-notif-toggle:checked ~ .notification {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-    animation: fadeOut 2s forwards;
-}
+    .popup-option:hover {
+        background-color: #5a3d2b;
+    }
 
-/* Fade out animation */
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; transform: translateX(-50%) scale(0); }
-}
+    /* Close button */
+    .popup-close {
+        display: block;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #6f4e37;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    /* Notification */
+    .notification {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        background-color: #6f4e37;
+        color: #fff3e0;
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-size: 18px;
+        text-align: center;
+        opacity: 0;
+        z-index: 200;
+        transition: transform 0.3s, opacity 0.3s;
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+
+    /* Show notification when checkbox checked */
+    #thankyou-notif-toggle:checked~.notification {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+        animation: fadeOut 2s forwards;
+    }
+
+    /* Fade out animation */
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-50%) scale(0);
+        }
+    }
 
     .hero {
         text-align: center;
@@ -173,16 +192,24 @@
     .menu-nav ul {
         list-style: none;
         display: flex;
+        justify-content: center;
         gap: 100px;
-        margin-left: 20px;
+        margin-left: 0;
         margin-bottom: 50px;
     }
 
     .menu-nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
+        width: 200px;
+        max-width: 80%;
+        display: block;
+        text-align: center;
 
+        background-color: #695240;
+        color: #fff3e0;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
     }
 
     .menu-grid {
@@ -196,7 +223,8 @@
     }
 
     .product-image {
-        width: 200px;
+        width: 100%;
+        max-width: 200px;
         height: 200px;
         margin: 0 auto 10px;
         border-radius: 10px;
@@ -207,107 +235,180 @@
 
 
     .product h3 {
-        font-size: 14px;
+        font-size: 1rem;
         margin-bottom: 20px;
     }
 
     .product p {
-        font-size: 12px;
+        font-size: 0.9rem;
         color: #666;
     }
 
-    .sizes ul {
+    .sizes ul,
+    .prices ul {
         list-style: none;
         display: flex;
+        justify-content: center;
         gap: 20px;
-        margin-left: 40px;
-        font-size: 12px;
+        margin-left: 0;
+        padding: 0;
+        font-size: 0.9rem;
         color: #666;
-        margin-bottom: 0px;
         font-weight: bold;
     }
 
     .prices ul {
-        list-style: none;
-        display: flex;
-        gap: 40px;
-        margin-left: 53px;
-        font-size: 12px;
-        color: #666;
+        gap: 30px;
         margin-bottom: 60px;
+        font-weight: normal;
     }
 
     .cart-container {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  margin-left: 6px;
-}
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        margin-left: 6px;
+    }
 
-/* Cart icon */
-.cart-icon svg {
-  width: 16px;
-  height: 16px;
-  fill: #3b2f2f;
-  transition: transform 0.2s ease;
-}
-.cart-container:hover svg {
-  transform: scale(1.2);
-}
+    /* Cart icon */
+    .cart-icon svg {
+        width: 16px;
+        height: 16px;
+        fill: #3b2f2f;
+        transition: transform 0.2s ease;
+    }
 
-/* Tooltip "Buy" */
-.cart-text {
-  position: absolute;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #3b2f2f;
-  color: #fff3e0;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 11px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.cart-container:hover .cart-text {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
-}
+    .cart-container:hover svg {
+        transform: scale(1.2);
+    }
 
-/* Hide the checkbox */
-.cart-checkbox {
-  display: none;
-}
+    .cart-text {
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #3b2f2f;
+        color: #fff3e0;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 11px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        white-space: nowrap;
+    }
 
-/* Popup styling */
-.cart-popup {
-  position: absolute;
-  left: 50%;
-  bottom: 28px;
-  transform: translateX(-50%);
-  background-color: #3b2f2f;
-  color: #fff3e0;
-  padding: 12px 20px;
-  border-radius: 12px;
-  font-size: 18px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
+    .cart-container:hover .cart-text {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-4px);
+    }
 
-/* Show popup when checkbox is checked */
-.cart-checkbox:checked + .cart-popup {
-  opacity: 1;
-  animation: fadeOut 2s forwards; /* auto fade out */
-}
+    .cart-checkbox {
+        display: none;
+    }
 
-/* Fade out animation */
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
-}
+    /* Popup styling */
+    .cart-popup {
+        position: absolute;
+        left: 50%;
+        bottom: 28px;
+        transform: translateX(-50%);
+        background-color: #3b2f2f;
+        color: #fff3e0;
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-size: 16px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .cart-checkbox:checked+.cart-popup {
+        opacity: 1;
+        animation: fadeOut 2s forwards;
+    }
+
+    /* Fade out animation */
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @media (max-width: 1000px) {
+
+        .menu-container {
+            width: 100%;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .search-bar {
+            flex-direction: column;
+        }
+
+        .search-bar input[type="search"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .payment-button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .menu-nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-left: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .menu-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .product {
+            padding: 0 10px;
+        }
+
+        .product-image {
+            max-width: 250px;
+            height: 250px;
+        }
+
+        .sizes ul,
+        .prices ul {
+            font-size: 0.8rem;
+        }
+
+        .prices ul {
+            margin-bottom: 30px;
+        }
+    }
 </style>
 
 <body>
@@ -349,31 +450,31 @@
             <div id="menu">
                 <div class="menu-container">
                     <div class="search-bar-container">
-    <div class="search-bar">
-        <input type="search" placeholder="Search...">
-        <label for="payment-popup-toggle" class="payment-button">Pay Now</label>
-    </div>
-</div>
+                        <div class="search-bar">
+                            <input type="search" placeholder="Search...">
+                            <label for="payment-popup-toggle" class="payment-button">Pay Now</label>
+                        </div>
+                    </div>
 
-<!-- Hidden checkboxes for popup and notification -->
-<input type="checkbox" id="payment-popup-toggle" class="popup-toggle">
-<input type="checkbox" id="thankyou-notif-toggle" class="popup-toggle">
+                    <!-- Hidden checkboxes for popup and notification -->
+                    <input type="checkbox" id="payment-popup-toggle" class="popup-toggle">
+                    <input type="checkbox" id="thankyou-notif-toggle" class="popup-toggle">
 
-<!-- First Popup: Dine-in / Delivery -->
-<div class="popup popup1">
-    <div class="popup-content">
-        <p>Choose your option:</p>
-        <!-- Clicking these will trigger the notification -->
-        <label for="thankyou-notif-toggle" class="popup-option">Dine-in</label>
-        <label for="thankyou-notif-toggle" class="popup-option">Delivery</label>
-        <label for="payment-popup-toggle" class="popup-close">DONE</label>
-    </div>
-</div>
+                    <!-- First Popup: Dine-in / Delivery -->
+                    <div class="popup popup1">
+                        <div class="popup-content">
+                            <p>Choose your option:</p>
+                            <!-- Clicking these will trigger the notification -->
+                            <label for="thankyou-notif-toggle" class="popup-option">Dine-in</label>
+                            <label for="thankyou-notif-toggle" class="popup-option">Delivery</label>
+                            <label for="payment-popup-toggle" class="popup-close">DONE</label>
+                        </div>
+                    </div>
 
-<!-- Notification -->
-<div class="notification">
-    Thank you for buying! We hope you enjoy it!
-</div>
+                    <!-- Notification -->
+                    <div class="notification">
+                        Thank you for buying! We hope you enjoy it!
+                    </div>
                     <div class="menu-nav">
                         <nav>
                             <ul>
@@ -397,26 +498,27 @@
                                 <section class="Black coffee">
                                     <h3>
                                         <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                            <span class="cart-icon">
+                                                <!-- Minimal dark cart SVG -->
+                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                    <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                                </svg>
+                                            </span>
+                                            <span class="cart-text">Buy</span>
+                                        </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                        <!-- Hidden checkbox for toggle -->
+                                        <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                        Black Coffee</h3>
+                                        <!-- Popup -->
+                                        <span class="cart-popup">Added to cart!</span>
+                                        Black Coffee
+                                    </h3>
                                     <p>"Strong, bold, and pure — a classic brew for true coffee lovers."</p>
                                     <div class="sizes">
                                         <nav>
@@ -444,26 +546,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Ca Phe Sua Da</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Ca Phe Sua Da
+                                </h3>
                                 <p>“A bold Vietnamese brew poured over ice and mellowed with creamy condensed milk —
                                     sweet, smooth, and perfectly balanced.”</p>
                                 <div class="sizes">
@@ -491,26 +594,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Cafe Latte</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Cafe Latte
+                                </h3>
                                 <p>“Velvety steamed milk meets rich espresso in this classic latte — the perfect balance
                                     of creaminess and flavor.”</p>
                                 <div class="sizes">
@@ -525,8 +629,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>80.00</li>
+                                            <li>80.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>100.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -537,26 +643,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    French Vanilla</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    French Vanilla
+                                </h3>
                                 <p>"Smooth, creamy, and delicately sweet — a timeless favorite infused with rich vanilla
                                     flavor."</p>
                                 <div class="sizes">
@@ -571,8 +678,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>85.00</li>
+                                            <li>85.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>105.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -583,26 +692,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Spanish Latte</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Spanish Latte
+                                </h3>
                                 <p>“Rich, smooth, and perfectly sweet — a creamy blend inspired by traditional Spanish
                                     café culture.”</p>
                                 <div class="sizes">
@@ -617,8 +727,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>85.00</li>
+                                            <li>85.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>105.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -629,26 +741,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Caramel Macchiato</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Caramel Macchiato
+                                </h3>
                                 <p>“A velvety blend of espresso and milk, finished with golden caramel drizzle for the
                                     perfect balance of sweet and bold.”</p>
                                 <div class="sizes">
@@ -663,8 +776,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>85.00</li>
+                                            <li>85.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>105.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -675,26 +790,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Mocha Hazelnut</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Mocha Hazelnut
+                                </h3>
                                 <p>“Creamy mocha infused with roasted hazelnut flavor — a perfect harmony of coffee,
                                     chocolate, and nutty sweetness.”</p>
                                 <div class="sizes">
@@ -709,8 +825,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>90.00</li>
+                                            <li>90.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>110.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -721,26 +839,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    White Chocolate Mocha</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    White Chocolate Mocha
+                                </h3>
                                 <p>“A luxurious mix of espresso, steamed milk, and velvety white chocolate — perfectly
                                     balanced and irresistibly smooth.”</p>
                                 <div class="sizes">
@@ -755,8 +874,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>90.00</li>
+                                            <li>90.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>110.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -767,26 +888,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Salted Caramel Macchiato</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Salted Caramel Macchiato
+                                </h3>
                                 <p>“A smooth blend of espresso and milk layered with buttery caramel and a touch of sea
                                     salt for a sweet–salty delight.”</p>
                                 <div class="sizes">
@@ -801,8 +923,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>90.00</li>
+                                            <li>90.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>110.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -813,26 +937,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Coffee Jelly Latte</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Coffee Jelly Latte
+                                </h3>
                                 <p>“A perfect blend of espresso, milk, and silky coffee jelly for a fun and flavorful
                                     coffee experience.”</p>
                                 <div class="sizes">
@@ -847,8 +972,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>95.00</li>
+                                            <li>95.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>115.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -866,26 +993,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Priam's Iced Chocolate Latte</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Priam's Iced Chocolate Latte
+                                </h3>
                                 <p>“A rich blend of chocolate and milk served over ice — smooth, creamy, and perfectly
                                     sweet.”</p>
                                 <div class="sizes">
@@ -913,26 +1041,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Ice Strawberry Latte</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Ice Strawberry Latte
+                                </h3>
                                 <p>“A smooth blend of milk and sweet strawberry syrup served over ice — creamy, cool,
                                     and delightfully fruity.”</p>
                                 <div class="sizes">
@@ -947,8 +1076,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>90.00</li>
+                                            <li>90.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>110.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -959,26 +1090,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Matcha Latte</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Matcha Latte
+                                </h3>
                                 <p>“Creamy milk infused with authentic matcha — smooth, vibrant, and refreshing.”</p>
                                 <div class="sizes">
                                     <nav>
@@ -1005,26 +1137,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    White Chocolate Oat Matcha</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    White Chocolate Oat Matcha
+                                </h3>
                                 <p>"A comforting mix of matcha and oat milk infused with white chocolate — rich, silky,
                                     and naturally satisfying.”</p>
                                 <div class="sizes">
@@ -1039,8 +1172,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>135.00</li>
+                                            <li>135.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>155.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1057,26 +1192,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Choco Java</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Choco Java
+                                </h3>
                                 <p>“Creamy chocolate frappe with a shot of espresso — bold coffee flavor meets sweet,
                                     icy indulgence.”</p>
                                 <div class="sizes">
@@ -1091,8 +1227,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>110.00</li>
+                                            <li>110.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>130.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1103,26 +1241,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Golden Caramel</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Golden Caramel
+                                </h3>
                                 <p>“A creamy caramel frappe blended to perfection — smooth, sweet, and refreshingly
                                     indulgent.”</p>
                                 <div class="sizes">
@@ -1137,8 +1276,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>110.00</li>
+                                            <li>110.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>130.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1149,26 +1290,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Strawberry Swirl</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Strawberry Swirl
+                                </h3>
                                 <p>“A creamy, ice-blended drink with sweet strawberry swirls — smooth, refreshing, and
                                     delightfully fruity.”</p>
                                 <div class="sizes">
@@ -1183,8 +1325,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>110.00</li>
+                                            <li>110.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>130.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1195,26 +1339,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Jelly Brew</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Jelly Brew
+                                </h3>
                                 <p>“A refreshing coffee frappe with chewy coffee jelly — smooth, sweet, and satisfyingly
                                     fun.”</p>
                                 <div class="sizes">
@@ -1229,8 +1374,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>130.00</li>
+                                            <li>130.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>140.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1241,26 +1388,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Very Matcha</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Very Matcha
+                                </h3>
                                 <p>“Premium matcha blended with milk and ice for a cool, creamy, and energizing treat.”
                                 </p>
                                 <div class="sizes">
@@ -1275,8 +1423,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>130.00</li>
+                                            <li>130.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>140.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1293,26 +1443,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Sparkling Strawberry</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Sparkling Strawberry
+                                </h3>
                                 <p>“A bubbly strawberry refresher that's sweet, tangy, and perfectly cool.”</p>
                                 <div class="sizes">
                                     <nav>
@@ -1326,8 +1477,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>80.00</li>
+                                            <li>80.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>100.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1338,26 +1491,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Homemade Iced Tea</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Homemade Iced Tea
+                                </h3>
                                 <p>“A classic brewed iced tea served chilled — smooth, crisp, and perfectly refreshing.”
                                 </p>
                                 <div class="sizes">
@@ -1372,8 +1526,10 @@
                                 <div class="prices">
                                     <nav>
                                         <ul>
-                                            <li>120.00</li>
+                                            <li>120.00&nbsp;&nbsp;&nbsp;</li>
                                             <li>140.00</li>
+                                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -1390,26 +1546,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Flavored Fries</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Flavored Fries
+                                </h3>
                                 <p>"Crispy potato fries coated in your favorite flavor"</p>
                                 <p>Flavors: BBQ|Cheese|Sour Cream <br> 80.00</p>
                             </div>
@@ -1419,26 +1576,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Tofu Squares</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Tofu Squares
+                                </h3>
                                 <p>"Crunchy tofu bites served with a creamy liver-infused mayo and a kick of a chili
                                     garlic oil."</p>
                                 <p>50.00(5pcs)</p>
@@ -1449,26 +1607,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Pinoy Cravings Combo</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Pinoy Cravings Combo
+                                </h3>
                                 <p>"Crispy, tasty, and proudly Pinoy! A combo of 10 kikiam and 10 fishballs that hits
                                     the spot everytime."</p>
                                 <p>40.00</p>
@@ -1479,26 +1638,27 @@
                                 </div>
                                 <h3>
                                     <label class="cart-container" for="cart-checkbox-1">
-    <span class="cart-icon">
-      <!-- Minimal dark cart SVG -->
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
-        <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
+                                        <span class="cart-icon">
+                                            <!-- Minimal dark cart SVG -->
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b2f2f">
+                                                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44c-.16.28-.25.61-.25.97 
         0 1.1.9 2 2 2h10v-2h-10l1.1-2h5.45c.75 0 
         1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 
         0-.55-.45-1-1-1h-14zm-1 16c-1.1 0-2 .9-2 2s.9 2 
         2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 
-        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-      </svg>
-    </span>
-    <span class="cart-text">Buy</span>
-  </label>
+        2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                            </svg>
+                                        </span>
+                                        <span class="cart-text">Buy</span>
+                                    </label>
 
-  <!-- Hidden checkbox for toggle -->
-  <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
+                                    <!-- Hidden checkbox for toggle -->
+                                    <input type="checkbox" id="cart-checkbox-1" class="cart-checkbox">
 
-  <!-- Popup -->
-  <span class="cart-popup">Added to cart!</span>
-                                    Cheese Sticks</h3>
+                                    <!-- Popup -->
+                                    <span class="cart-popup">Added to cart!</span>
+                                    Cheese Sticks
+                                </h3>
                                 <p>Creamy cheese wrapped in a crisp, golden crust</p>
                                 <p>Flavors:BBQ|Cheese|Sour Cream <br> 20.00(4pcs) </p>
                             </div>
@@ -1515,10 +1675,10 @@
         <div class="footer_content">
             <h1>CONTACT US</h1>
             <h2>ANGONO, RIZAL</h2>
-             <p><i class="fa-solid fa-house"></i><a href="https://maps.app.goo.gl/vCoG4UZdh3zRLyTk6"> #7 Col. Guido St.
+            <p><i class="fa-solid fa-house"></i><a href="https://maps.app.goo.gl/vCoG4UZdh3zRLyTk6"> #7 Col. Guido St.
                     San Roque, Angono, Philippines, 1940</a></p>
-             <p><i class="fa-solid fa-envelope"></i><a href="mailto:priams@gmail.com"> priams@gmail.com</a> </p>
-             <p><i class="fa-solid fa-phone-volume"></i><a href="tel:09123456789"> 09123456789</a></p>
+            <p><i class="fa-solid fa-envelope"></i><a href="mailto:priams@gmail.com"> priams@gmail.com</a> </p>
+            <p><i class="fa-solid fa-phone-volume"></i><a href="tel:09123456789"> 09123456789</a></p>
             <div class="socials">
                 <h2>FOLLOW US:</h2>
                 <div class="icons">

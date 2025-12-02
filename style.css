@@ -252,3 +252,93 @@ main {
   width: 600px;
   height: 330px;
 }
+
+@media (max-width: 1000px) {
+  body {
+    padding: 0 5px;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 10px 0;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin: 0 auto 10px;
+  }
+
+  .cafe-banner h1 {
+    font-size: 30px;
+    margin-left: 40px;
+  }
+
+  .cafe-banner p {
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 2px;
+  }
+  
+  header nav {
+    width: 100%; 
+    order: 2;
+  }
+  
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  header nav a {
+    font-size: 20px;
+  }
+
+  .steam {
+    left: 45px;
+    top: -5px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 20px 0;
+    align-items: center;
+  }
+
+  .footer_content {
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .footer h1,
+  .footer p,
+  .footer h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer h1 {
+    font-size: 30px;
+  }
+  
+  .socials {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
+  .map {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .map img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}

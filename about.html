@@ -18,18 +18,21 @@
     .hero {
         background-image: url(pictures/sayhellotofav.jpg);
         background-repeat: no-repeat;
-        background-size:auto;
+        background-size: cover;
         background-position: center;
-        /* background-color: rgba(240, 248, 255, 0.5); */
-        margin-left: -20px;
-        text-align: center;
+        padding: 80px 0;
+        margin: 0;
+        text-align: left;
+        width: 100%;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: rgb(218, 218, 218);
     }
 
     .info {
-        max-width: 800px;
-        text-align: center;
+        max-width: 900px;
+        text-align: left;
+        margin: 0;
+        padding-left: 5%;
         z-index: 2;
         animation: fadeInUp 1s ease-out;
     }
@@ -39,6 +42,7 @@
             opacity: 0;
             transform: translateY(40px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -46,28 +50,30 @@
     }
 
     .hero h1 {
-        padding-left: 25px;
         font-size: 50px;
+        padding: 0;
+        text-align: left;
     }
 
     .hero p {
-        padding-right: 50px;
         font-size: 20px;
-        padding-left: 50px;
+        padding: 10px 0;
+        text-align: left;
+        line-height: 1.1;
     }
 
     /* ratings */
     .more {
         background-color: rgba(240, 248, 255, 0.6);
         margin-top: 50px;
-        margin-left: -20px;
-        padding-left: 50px;
         margin-bottom: -20px;
+        padding: 20px 0;
     }
 
 
     .ratings-wrapper {
-        padding: 40px;
+        max-width: 1200px;
+        padding: 40px 20px;
         border-radius: 8px;
         margin: auto;
         display: flex;
@@ -76,6 +82,7 @@
 
     .main-rating {
         width: 25%;
+        flex-shrink: 0;
     }
 
     .main-rating h3 {
@@ -97,7 +104,7 @@
     .review-grid {
         width: 75%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 25px;
     }
 
@@ -120,6 +127,51 @@
     .review-footer {
         font-size: 13px;
         color: #525252;
+    }
+
+    @media (max-width: 1000px) {
+
+        .hero {
+            padding: 40px 0;
+        }
+
+        .info {
+            max-width: 100%;
+            padding-left: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            padding: 10px 20px 10px 0;
+            color: rgb(255, 200, 200);
+        }
+
+        .ratings-wrapper {
+            flex-direction: column;
+            padding: 20px 15px;
+            gap: 30px;
+        }
+
+        .main-rating {
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .review-grid {
+            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .review-text {
+            font-size: 15px;
+        }
     }
 </style>
 
@@ -157,7 +209,9 @@
         <section class="hero">
             <div class="info">
                 <h1>About Us</h1>
-                <p>At Priam's Café you're more than just a customer—you're family. Every cup is brewed for great stories, shared moments, and deeper connections. Join us for coffee and conversations in your favorite café 🫶
+                <p>At Priam's Café you're more than just a customer—you're family. Every cup is brewed for great
+                    stories, shared moments, and deeper connections. Join us for coffee and conversations in your
+                    favorite café!
                 </p>
 
             </div>
@@ -186,7 +240,8 @@
                     <div class="review">
                         <div class="stars">★★★★★</div>
                         <div class="review-title">Best iced coffee</div>
-                        <div class="review-text">Sarap po ng coffee 👅 Ang babait po ng Staff and ni owner. Very accommodating 🤎 Cozy ambiance. 🤗
+                        <div class="review-text">Sarap po ng coffee 👅 Ang babait po ng Staff and ni owner. Very
+                            accommodating 🤎 Cozy ambiance. 🤗
                         </div>
                         <div class="review-footer">Paola P. · 5 days ago</div>
                     </div>
@@ -213,7 +268,8 @@
                     <div class="review">
                         <div class="stars">★★★★★</div>
                         <div class="review-title">Beautiful design</div>
-                        <div class="review-text">The staff were friendly and accommodating, and the ambiance was cozy and relaxing
+                        <div class="review-text">The staff were friendly and accommodating, and the ambiance was cozy
+                            and relaxing
                         </div>
                         <div class="review-footer">Mica J. · 3 days ago</div>
                     </div>
@@ -245,7 +301,7 @@
         <div class="footer_content">
             <h1>CONTACT US</h1>
             <h2>ANGONO, RIZAL</h2>
-             <p><i class="fa-solid fa-house"></i><a href="https://maps.app.goo.gl/vCoG4UZdh3zRLyTk6"> #7 Col. Guido St.
+            <p><i class="fa-solid fa-house"></i><a href="https://maps.app.goo.gl/vCoG4UZdh3zRLyTk6"> #7 Col. Guido St.
                     San Roque, Angono, Philippines, 1940</a></p>
             <p><i class="fa-solid fa-envelope"></i><a href="mailto:priams@gmail.com"> priams@gmail.com</a> </p>
             <p><i class="fa-solid fa-phone-volume"></i><a href="tel:09123456789"> 09123456789</a></p>
